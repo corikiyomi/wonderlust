@@ -8,7 +8,10 @@
 </head>
 <body>
     <header>
-        <a href="#main-content" class="skip-to-content-link">Skip to main content</a>
+        <a href="#main-content" class="skip-to-content-link">Skip to "main content"</a>
+        <a href="#plan-your-trip" class="skip-to-content-link">Skip to "plan your trip"</a>
+        <a href="#testimonials" class="skip-to-content-link">Skip to "Testimonials"</a>
+        <a href="#contact-us" class="skip-to-content-link">Skip to "contact us"</a>
 
         <h1>Destination Majorca</h1>
         <p>Let Wonderlust Travel help you plan the trip of your dreams!
@@ -28,8 +31,8 @@
             <li><a href="#contact-us">Contact Us</a></li>
         </ul>
     </nav>
-    <main>
-        <article id="main-content">
+    <main id="main-content">
+        <article>
             <h2>Majorca</h2>
             <section id="intro">
                 <h3>Introduction</h3>
@@ -243,35 +246,36 @@
     <footer>
         <section id="contact-us">
             <h2>Contact Us <span id="required">(*required)</span></h2>
+            <form>
                 <div>
-                    <label>First Name<span>*</span></label>
-                    <input>
+                    <label for="first-name">First Name<span class="required">*</span></label>
+                    <input id="first-name" name="first-name" type="text" title="Please enter your first name" required>
                 </div>
                 <div>
-                    <label>Last Name<span>*</span></label>
-                    <input>
+                    <label for="last-name">Last Name<span class="required">*</span></label>
+                    <input id="last-name" name="last-name" type="text" title="Please enter your last name" required>
                 </div>
                 <div>
-                    <label>Email<span>*</span></label>
-                    <input>
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input id="email" name="email" type="email" title="Please enter your email address" required>
                 </div>
                 <div>
-                    <label>Phone<span>*</span></label>
-                    <input>
+                    <label for="phone">Phone<span class="required">*</span></label>
+                    <input id="phone" name="phone" type="tel" title="Please enter your phone number" required>
                 </div>
                 <fieldset id="preferred-contact">
-                <legend>Preferred Contact Method<span>*</span></legend>
+                    <legend>Preferred Contact Method<span class="required">*</span></legend>
                     <div> 
-                        <input>
-                        <label>Email</label>
+                        <input type="radio" id="email-preferred" name="contact-method" value="email-preferred" required>
+                        <label for="email-preferred">Email</label>
                     </div>
                     <div>
-                        <input>
-                        <label>Text</label>
+                        <input type="radio" id="text-preferred" name="contact-method" value="text-preferred">
+                        <label for="text-preferred">Text</label>
                     </div>
                     <div>
-                        <input>
-                        <label>Phone</label>
+                        <input type="radio" id="phone-preferred" name="contact-method" value="phone-preferred">
+                        <label for="phone-preferred">Phone</label>
                     </div>
                 </fieldset>
                 <fieldset id="destination">
@@ -300,8 +304,8 @@
                         <option>Flexible</option>
                     </select>
                 </fieldset>
-                <input>
-            
+                <input type="submit" id="submit" aria-label="submit">
+            </form>
         </section>
         <section id="legal">
             <h2>Legal</h2>

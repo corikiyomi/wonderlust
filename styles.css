@@ -81,9 +81,12 @@ header, nav, article, footer {
 }
 .skip-to-content-link {
     position: absolute; 
+    left: -50%;
     color: var(--turquoise-blue);
 }
-
+.skip-to-content-link:focus {
+    transform: translateY(0%);
+}
 picture, #plan-your-trip, #about-your-destination  {
     margin-top:1rem;
 }
@@ -483,6 +486,9 @@ small {
     }
     #submit {
         grid-column: 2/3;
+    }
+    #submit:hover {
+        cursor: pointer;
     }
 }
 /* ----------------- GLOBAL STYLES (LARGE) -----------------*/
